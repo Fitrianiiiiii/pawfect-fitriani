@@ -1,0 +1,400 @@
+/* ========== VARIABEL WARNA ========== */
+:root {
+    --fitriani_o: #F28C28;
+    /* oranye (utama) */
+    --fitriani_t: #2A9D8F;
+    /* teal (aksen) */
+    --fitriani_bg: #FFF8F0;
+    /* krem (background) */
+    --fitriani_tx: #3D2C1E;
+    /* coklat gelap (teks) */
+    --fitriani_w: #fff;
+    /* putih */
+}
+
+/* ========== RESET & DASAR ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--fitriani_bg);
+    color: var(--fitriani_tx);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.25;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.fitriani_wrap {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ========== HEADER & MENU ========== */
+#fitriani_header {
+    background: var(--fitriani_w);
+    box-shadow: 0 2px 10px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.fitriani_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.fitriani_logo {
+    font: 700 1.4rem Poppins, sans-serif;
+    color: var(--fitriani_o);
+}
+
+.fitriani_menu {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+}
+
+.fitriani_menu a {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.fitriani_menu a:hover,
+.fitriani_menu a.fitriani_aktif {
+    background: var(--fitriani_o);
+    color: #fff;
+}
+
+#fitriani_burger {
+    display: none;
+    /* tersembunyi di desktop */
+    background: none;
+    border: 0;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ========== HERO (BAGIAN ATAS HALAMAN) ========== */
+.fitriani_hero {
+    background: linear-gradient(135deg, var(--fitriani_o), #f6b65f);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.fitriani_hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+}
+
+.fitriani_hero p {
+    max-width: 560px;
+    margin: 0 auto 24px;
+}
+
+.fitriani_hero_kecil {
+    padding: 48px 0;
+    /* hero versi pendek untuk halaman dalam */
+}
+
+/* ========== TOMBOL ========== */
+.fitriani_btn {
+    display: inline-block;
+    background: var(--fitriani_t);
+    color: #fff;
+    border: 0;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font: 700 1rem Poppins, sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fitriani_btn:hover {
+    transform: translateY(-2px);
+    background: #21867a;
+}
+
+/* ========== SECTION, GRID, KARTU ========== */
+.fitriani_section {
+    padding: 56px 0;
+}
+
+.fitriani_section>.fitriani_wrap>h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--fitriani_t);
+}
+
+.fitriani_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.fitriani_card {
+    background: var(--fitriani_w);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 4px 14px #0001;
+}
+
+.fitriani_card img {
+    width: 100%;
+    /* selalu selebar kartu */
+    aspect-ratio: 1 / 1;
+    /* semua foto berbentuk kotak sama */
+    object-fit: cover;
+    /* foto memenuhi kotak, tidak gepeng */
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.fitriani_card h3 {
+    margin-bottom: 6px;
+}
+
+.fitriani_emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.fitriani_harga {
+    color: var(--fitriani_o);
+    font-weight: 800;
+}
+
+/* ========== FILTER PRODUK ========== */
+.fitriani_filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.fitriani_fbtn {
+    border: 2px solid var(--fitriani_t);
+    background: #fff;
+    color: var(--fitriani_t);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.fitriani_fbtn.fitriani_aktif {
+    background: var(--fitriani_t);
+    color: #fff;
+}
+
+/* ========== TABEL HARGA ========== */
+.fitriani_tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fitriani_tabel th {
+    background: var(--fitriani_t);
+    color: #fff;
+}
+
+.fitriani_tabel th,
+.fitriani_tabel td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.fitriani_scroll {
+    overflow-x: auto;
+    /* tabel bisa digeser di HP */
+}
+
+/* ========== GALERI & LIGHTBOX ========== */
+.fitriani_gitem {
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #ffe3c2;
+}
+
+.fitriani_gitem:nth-child(even) {
+    background: #c9eeea;
+}
+
+.fitriani_gitem:hover {
+    transform: scale(1.04);
+}
+
+.fitriani_gitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#fitriani_lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    place-items: center;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#fitriani_lightbox.fitriani_buka {
+    display: grid;
+}
+
+#fitriani_lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+}
+
+/* ========== FAQ ACCORDION ========== */
+.fitriani_faq_t {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 16px;
+    font: 700 1rem Poppins, sans-serif;
+    cursor: pointer;
+}
+
+.fitriani_faq_j {
+    display: none;
+    padding: 14px 16px;
+    background: #fff;
+}
+
+.fitriani_faq_j.fitriani_buka {
+    display: block;
+}
+
+/* ========== FORM KONTAK ========== */
+.fitriani_form label {
+    display: block;
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+.fitriani_form input,
+.fitriani_form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid #e5d5c3;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.fitriani_form input:focus,
+.fitriani_form textarea:focus {
+    outline: 0;
+    border-color: var(--fitriani_t);
+}
+
+.fitriani_error {
+    color: #c0392b;
+    font-size: 0.85rem;
+    min-height: 1.2em;
+}
+
+#fitriani_sukses {
+    display: none;
+    background: #d7f5ef;
+    color: #14665c;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 14px;
+    font-weight: 700;
+}
+
+.fitriani_dua {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+/* ========== FOOTER & TOMBOL KE ATAS ========== */
+#fitriani_footer {
+    background: var(--fitriani_tx);
+    color: #fff;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+#fitriani_top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--fitriani_o);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ========== RESPONSIVE (LAYAR HP / TABLET) ========== */
+@media (max-width: 768px) {
+    #fitriani_burger {
+        display: block;
+    }
+
+    .fitriani_menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 10px 20px 16px;
+    }
+
+    .fitriani_menu.fitriani_buka {
+        display: flex;
+    }
+
+    .fitriani_hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .fitriani_dua {
+        grid-template-columns: 1fr;
+    }
+}
